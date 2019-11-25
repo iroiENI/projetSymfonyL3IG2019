@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}CreateAccount{% endblock %}
+
+{% block body %}
+
+<main class="pt-5 mx-lg-15" style="margin-left:280px;">
+        <div class="container-fluid mt-5">
+    
+          <!--Grid row-->
+          <div class="row wow fadeIn">
+    
+            <!--Grid column-->
+            <div class="col-md-8">
+    
+              <!--Card-->
+              <div class="card">
+    
+                <!--Card content-->
+                <div class="card-body">
+
+        <div class="bg-light p-3">
+            <h1>Inscrivez-vous!</h1>
+        </div>
+
+{{ form_start(form) }}
+{{ form_row(form.username, { 'label': ' ', 'attr':{'placeholder': ' Nom d\'utilisateur...'}}) }}
+{{ form_row(form.email, { 'label': ' ', 'attr':{'placeholder': 'Votre Email...'}}) }}
+{{ form_row(form.adresse, { 'label': ' ', 'attr':{'placeholder': ' Votre adresse...'}}) }}
+{{ form_row(form.password, { 'label': ' ', 'attr':{'placeholder': ' Votre mot de passe...'}}) }}
+{{ form_row(form.confirm_password, { 'label': ' ', 'attr':{'placeholder': 'Confirmer votre le mot de passe...'}}) }}
+
+<button type="submit" class="btn btn-success">S'nscrire</button>
+
+{{ form_end(form) }}
+
+{#----------#}
+</div>
+<div>
+</div>
+
+</div>
+<!--Grid row-->
+</div>
+
+
+</div>
+</div>
+</main>
+{% endblock %}

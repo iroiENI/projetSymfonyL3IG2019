@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les produits
+{% endblock %}
+
+{% block body %}
+
+<main class="pt-5 mx-lg-15" style="margin-left:280px;">
+        <div class="container-fluid mt-5">
+    
+          <!--Grid row-->
+          <div class="row wow fadeIn">
+    
+            <!--Grid column-->
+            <div class="col-md-8">
+    
+              <!--Card-->
+              <div class="card">
+    
+                <!--Card content-->
+                <div class="card-body">
+                    {#-----------#}
+
+                    <div>
+                            <div class="card h-300">
+                                    <h3>{{ product.designation }}</h3>
+                              <a href=""><img class="card-img-top" src="{{ product.image }}" alt=""></a>
+                              <div class="card-body">
+                                <h5> {{ product.pu }} Ar</h5>
+                                <p class="card-text">{{ product.fournisseur }}</p>
+                              </div>
+                             <div class="card-footer">
+                                    {% if app.user %}
+                                    <a href="{{ path('panier_add', {'id': product.id}) }}" class="btn btn-success float-right">
+                                        <i class="fas fa-shopping-cart mr-1"></i>
+                                        Ajouter
+                                    </a>
+                                    {% else %}
+                                        <a href="{{ path('security_connexion') }}" class="btn btn-success float-right">
+                                            <i class="fas fa-shopping-cart mr-1"></i>
+                                            Ajouter
+                                        </a>
+                
+                                    {% endif %}
+                              </div>
+                            </div>
+                          </div>
+
+{#----------#}
+</div>
+<div>
+</div>
+
+</div>
+<!--Grid row-->
+</div>
+
+
+</div>
+</div>
+</main>
+{% endblock %}

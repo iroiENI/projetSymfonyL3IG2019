@@ -1,0 +1,62 @@
+{% extends 'base2.html.twig' %}
+{% form_theme formProduct 'bootstrap_4_layout.html.twig' %}
+
+{% block title %}Actions
+{% endblock %}
+
+{% block body %}
+
+<main class="pt-5 mx-lg-15">
+        <div class="container-fluid mt-5">
+    
+          <!--Grid row-->
+          <div class="row wow fadeIn">
+    
+            <!--Grid column-->
+            <div class="col-md-8">
+    
+              <!--Card-->
+              <div class="card">
+    
+                <!--Card content-->
+                <div class="card-body">
+    <div class="bg-light p-3">
+        {% if editMod %}
+        <h1>Modification du produit</h1>
+        {% else %}
+        <h1>Creation d'un produit</h1>
+        {% endif %}
+    </div>
+ <div style="margin: 50px;">
+    {{ form_start(formProduct) }}
+
+    {{ form_row(formProduct.designation,  {'attr': {'placeholder': 'La designation du produit'}}) }}
+    {{ form_row(formProduct.category) }}
+    {{ form_row(formProduct.pu,  {'attr': {'placeholder': 'Le prix unitaire du produit'}}) }}
+    {{ form_row(formProduct.fournisseur,  {'attr': {'placeholder': 'Le fournisseur du produit'}}) }}
+    {{ form_row(formProduct.image, {'attr': {'placeholder': ' '}} ) }}
+
+    <button type="submit" class="btn btn-success"> 
+        {%  if editMod %}
+            enregistrer
+        {% else %}
+            Ajouter le produit
+        {% endif %}
+    </button>
+
+    {{ form_end(formProduct)}} 
+</div>
+
+</div>
+<div>
+</div>
+
+</div>
+<!--Grid row-->
+</div>
+
+
+</div>
+</div>
+</main>
+{% endblock %}

@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            {% block title %} Magasin M
+            {% endblock %}
+        </title>
+        {% block stylesheets %}
+ 
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet" >
+        <link href="homepage.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" >
+          
+        
+  <link href="/css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="/css/style.min.css" rel="stylesheet">
+      {% endblock %}
+    </head>
+
+    <body> 
+        <style>
+
+            .map-container{
+            overflow:hidden;
+            padding-bottom:56.25%;
+            position:relative;
+            height:0;
+            }
+            .map-container iframe{
+            left:0;
+            top:0;
+            height:100%;
+            width:100%;
+            position:absolute;
+            }
+          
+            </style>
+          </head>
+          
+          <body class="grey lighten-3">
+          
+            <!--Main Navigation-->
+            <header>
+          
+              <!-- Navbar -->
+              <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+                <div class="container-fluid">
+          
+                  <!-- Brand -->
+                  <a class="navbar-brand waves-effect" href="#">
+                    <strong class="blue-text">Admin</strong>
+                  </a>
+          
+                  <!-- Collapse -->
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+          
+                  <!-- Links -->
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          
+                    <!-- Left -->
+                    <ul class="navbar-nav mr-auto">
+                      <li class="nav-item">
+                          <a class="nav-item nav-link active" href="{{ path('admin')}}">Produits</a>                      </li>
+                      <li class="nav-item">
+                          <a class="nav-item nav-link" href="{{ path('admin_client')}}">Les clients</a>
+                      </li>
+                    </ul>
+          
+                    <!-- Right
+                    <ul class="navbar-nav nav-flex-icons">
+                      <form class="d-flex justify-content-center" method="post" action="<?php echo base_url('main/')?>">
+                       Default input
+                      <input type="search" placeholder="Rechercher" name="recherche" aria-label="Search" class="form-control">
+                      <button class="btn btn-primary btn-sm my-0 p" type="submit">
+                        <i class="fas fa-search"></i>
+                      </button>
+          
+                    </form>
+                    </ul>-->
+          
+                  </div>
+          
+                </div>
+              </nav>
+              <!-- Navbar -->
+
+     {#
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+
+            <a class="navbar-brand" href="#">Admin</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="{{ path('admin')}}">Produits</a>
+                <a class="nav-item nav-link" href="{{ path('admin_client')}}">Les clients</a>
+                <a class="nav-item nav-link" href="#">Commandes des clients</a>
+              </div>
+            </div>
+            </div>
+          </nav>
+        #}
+          <div>
+            {% block body %}{% endblock %}
+         </div>
+             {% block javascripts %}
+             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+         {% endblock %}
+             
+         </body>
+       <!--Footer-->
+  <footer class="page-footer text-center font-small primary-color-dark darken-2">
+
+      <!--Copyright-->
+      <div class="footer-copyright py-3">
+        © 2019 Copyright <a href="">L3IG SLAF</a>
+        <!--<a href="#"> By Lima </a>-->
+      </div>
+      <!--/.Copyright-->
+  
+    </footer>
+     </html>

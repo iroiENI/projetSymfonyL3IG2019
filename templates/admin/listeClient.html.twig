@@ -1,0 +1,67 @@
+{% extends 'base2.html.twig' %}
+
+{% block title %}Les clients
+{% endblock %}
+
+{% block body %}
+<main class="pt-5 mx-lg-15" style="margin-left:-200px; margin-right:90px">
+        <div class="container-fluid mt-5">
+    
+          <!--Grid row-->
+          <div class="row wow fadeIn">
+    
+            <!--Grid column-->
+            <div class="col-md-12 mb-4">
+    
+              <!--Card-->
+              <div class="card">
+    
+                <!--Card content-->
+                <div class="card-body">
+
+<div class="bg-light p-3">
+        <h1>Liste des clients abonnés</h1>
+    </div>
+
+{% if client | length >0 %}
+<table class="table table-striped">
+    <thead blue-grey lighten-4>
+        <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Adresse</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for c in client %}
+            <tr>
+                <td>{{ c.username }}</td>
+                <td>{{ c.email }}</td>
+                <td>{{ c.adresse }}</td>
+                <td>
+                    <a href="{{ path('client_delete', {'id': c.id}) }}" class="btn btn-danger btn-sm">
+                        <i class="fas fa-trash"></i>
+                    </a>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+<div>
+</div>
+
+</div>
+<!--Grid row-->
+</div>
+
+
+</div>
+</div>
+{% else %}
+    <h4>Votre liste de client est encore Vide! </h4>
+    {% endif %}
+</main>
+
+{% endblock %}

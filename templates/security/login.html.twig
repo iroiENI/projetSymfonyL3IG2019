@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+<div class="bg-light p-3" style="margin-top:70px;">
+  <h1>Connectez-vous!</h1>
+</div>
+<main class="pt-5 mx-lg-15" style="margin-left:280px;">
+    <div class="container-fluid mt-5">
+
+      <!--Grid row-->
+      <div class="row wow fadeIn">
+
+        <!--Grid column-->
+        <div class="col-md-8">
+
+          <!--Card-->
+          <div class="card" style="height: 400px;">
+
+            <!--Card content-->
+            <div class="card-body">
+                {#-----------#}
+<div class="bg-light p-3">
+    <h1>Connectez-vous!</h1>
+</div>
+ 
+ <form action="{{ path('security_connexion') }}" method="post">
+     <div class="form-group">
+         <input type="text" class="form-control" placeholder="Adresse Email" required name="_username">
+     </div>
+     <div class="form-group">
+            <input type="password" class="form-control" placeholder="Votre Mot de passe" required name="_password">
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Se connecter</button>
+    </div>
+ </form>
+ <a class="navbar-brand waves-effect" href="{{ path('security_account') }}">
+    <strong class="blue-text">creer un compte?</strong>
+  </a>
+
+{#----------#}
+</div>
+<div>
+</div>
+
+</div>
+<!--Grid row-->
+</div>
+
+
+</div>
+</div>
+</main>
+{% endblock %}
