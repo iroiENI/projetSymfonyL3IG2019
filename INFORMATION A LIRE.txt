@@ -5,6 +5,6 @@ Membres du groupe :
 - IROI William Avotra n* 42
 
 
-Utilisateur de test
+Utilisateur de test dans /admin
 Login : misaina
 Mot de passe : misaina1234
