@@ -5,6 +5,9 @@ Membres du groupe :
 - IROI William Avotra n* 42
 
 
-Utilisateur de test dans /admin
+Utilisateur de test 
 Login : misaina
 Mot de passe : misaina1234
+
+
+/admin pour administer le site en tant que administrateur, pour supprimer, modifier et ajouter des produits ou cactegories ainsi que pour gerer les utilisateurs (banir).
