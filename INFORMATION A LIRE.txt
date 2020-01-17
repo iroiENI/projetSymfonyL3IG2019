@@ -9,5 +9,5 @@ Utilisateur de test
 Login : misaina
 Mot de passe : misaina1234
 
-
-/admin pour administer le site en tant que administrateur, pour supprimer, modifier et ajouter des produits ou cactegories ainsi que pour gerer les utilisateurs (banir).
+Ceci est une application web gerant les panier des clients membre du site.
+127.0.0.1:8000/admin pour administer le site en tant que administrateur, pour supprimer, modifier et ajouter des produits ou cactegories ainsi que pour gerer les utilisateurs (banir etc.).
