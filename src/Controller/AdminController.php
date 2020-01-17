@@ -57,18 +57,6 @@ class AdminController extends AbstractController
         $form->handleRequest($request);
 
         if($form->isSubmitted()&& $form->isValid()){
-
-            $uploadedFile = $form['image']->getData();
-            if ($uploadedFile) {
-                $destination = $this->getParameter('kernel.project_dir').'/public/uploads';
-                $originalFilename = pathinfo($uploadedFile->getClientOriginalName(), PATHINFO_FILENAME);
-                $newFilename = Urlizer::urlize($originalFilename).'-'.uniqid().'.'.$uploadedFile->guessExtension();
-                $uploadedFile->move(
-                    $destination,
-                    $newFilename
-                );
-                $produit->setImage($newFilename);
-            }
         
             $manager->persist($produit);
             $manager->flush();
